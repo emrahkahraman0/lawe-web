@@ -1,0 +1,283 @@
+/////HEADER
+
+//Top_Header#
+#top_header {
+  width: 100%;
+  background-color: $primary-color;
+  //top_header
+  .top_header {
+    @include flex;
+    @include justify-content(space-between);
+    @include align-items(center);
+    height: 50px;
+    //&_info
+    &_info {
+      @include flex;
+      @include align-items(center);
+      //icon_item
+      .icon_item {
+        @include flex;
+        @include align-items(center);
+        margin-right: 110px;
+        &:last-child {
+          margin-right: 0;
+        }
+        i {font-size: 18px; color: $secondary-color;}
+        a {
+          padding-left: 15px; font-size: $regular-size; color: $secondary-color;
+          font-family: $two-family; @include weight(400);
+        }
+      }
+    }
+    //&_social
+    &_social {
+      //social
+      .social {
+        li {
+          display: inline-block;
+          margin-right: 15px;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            i {color: $secondary-color; font-size: 18px;}
+          }
+        }
+      }
+    }
+  }
+  //Notebook
+  @include notebook {display: none}
+}
+
+//Header#
+#header {
+  width: 100%;
+  background-color: $base-color;
+  //header-wrapper
+  .header-wrapper {
+    @include flex();
+    @include justify-content(space-between);
+    @include align-items(center);
+    height: 120px;
+    position: relative;
+    //logo
+    .logo {
+      position: relative;
+      z-index: 3;
+      img {
+        cursor: pointer;
+      }
+    }
+    //menu
+    .menu {
+      >li {
+        display: inline-block;
+        position: relative;
+        margin-right: 25px;
+        &:last-child {
+          margin-right: 0;
+        }
+        >a {
+          font-family: $one-family;
+          @include weight(500);
+          color: $primary-color;
+          text-transform: capitalize;
+          font-size: $large-size;
+          position: relative;
+          &::before {
+            position: absolute;
+            width: 0;
+            margin: -4px 0;
+            @include transition(0.4s);
+            content: "";
+            background-color: $secondary-color;
+            height: 4px;
+            border-radius: 2px;
+            left: 0;
+            bottom: 0;
+          }
+          &:hover {
+            color: $secondary-color;
+            &::before {
+              width: 100%;
+            }
+          }
+          &:not(:only-child):after {
+            padding-left: 5px;
+            content: '\e803';
+            font-family: "lawe-font";
+            font-size: $large-size;
+            @include weight(400);
+            color: $primary-color;
+          }
+        }
+        ul {
+          width: 200px;
+          position: absolute;
+          top: 35px;
+          left: 0;
+          z-index: 1;
+          padding: 15px 0 18px 10px;
+          background-color: $secondary-color;
+          opacity: 0;
+          visibility: hidden;
+          @include transition(0.4s);
+          li {
+            display: block;
+            padding-bottom: 15px;
+            &:last-child {
+              padding-bottom: 0;
+            }
+            a {
+              color: $base-color;
+              @include weight(bold);
+              font-size: $large-size;
+              text-transform: uppercase;
+              position: relative;
+              &::before {
+                position: absolute;
+                width: 0;
+                margin: -3px 0;
+                @include transition(0.4s);
+                content: "";
+                background-color: $base-color;
+                height: 3px;
+                border-radius: 2px;
+                left: 0;
+                bottom: 0;
+              }
+              &:hover {
+                &::before {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+        &:hover {
+          ul {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+        .active {
+          position: relative;
+          &::before {
+            position: absolute;
+            width: 0;
+            margin: -5px 0;
+            @include transition(0.4s);
+            content: "";
+            background-color: $secondary-color;
+            height: 4px;
+            border-radius: 2px;
+            left: 0;
+            bottom: 0;
+          }
+        }
+        .active, a.active {
+          color: $secondary-color;
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+    //hamburger
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 44px;
+      right: 15px;
+      cursor: pointer;
+      z-index: 999;
+      i {
+        color: $secondary-color;
+        font-size: 30px;
+        cursor: pointer;
+        @include transition(0.4s);
+      }
+    }
+    //Large
+    @include large {
+      .menu {
+        li {
+          margin-right: 20px;
+          a {
+            font-size: $regular-size;
+          }
+          ul {
+            li {
+              a {font-size: $regular-size;}
+            }
+          }
+        }
+      }
+    }
+    //Notebook
+    @include notebook {
+      .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: $base-color;
+        z-index: 2;
+        text-align: center;
+        @include flex();
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include scale(0);
+        opacity: 0;
+        transition: opacity 650ms;
+        li {
+          display: block;
+          margin-right: 0;
+          padding-bottom: 30px;
+          &:last-child {
+            padding-bottom: 0;
+          }
+          a {
+            font-size: 18px;
+            @include weight(bold);
+            color: $three-color;
+            &::before {
+              background-color: $secondary-color;
+            }
+          }
+          ul {
+            width: 100%;
+            top: 30px;
+            padding: 15px 0;
+            li {
+              padding-bottom: 12px;
+              &:last-child {
+                padding-bottom: 0;
+              }
+              a {font-size: 12px; line-height: normal;}
+            }
+          }
+        }
+      }
+      .menu.open {
+        opacity: 1;
+        @include scale(1);
+      }
+      .hamburger {
+        display: block;
+        .icon-cancel {display: none;}
+        .icon-cancel.open {display: block;}
+        .icon-menu.open {display: none;}
+      }
+    }
+  }
+}
+
+#header.fixed {
+  @include box-shadow2(0px, 3px, 10px, 0px, rgba(0,0,0,0.36));
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
