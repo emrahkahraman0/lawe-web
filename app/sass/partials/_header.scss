@@ -277,7 +277,7 @@
 
 #header.fixed {
   @include box-shadow2(0px, 3px, 10px, 0px, rgba(0,0,0,0.36));
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 2;
 }

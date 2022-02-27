@@ -1,1 +1,259 @@
 /////FOOTER
+
+//Footer#
+#footer {
+  width: 100%;
+  padding: 100px 0 100px 0;
+  background: linear-gradient(to bottom, rgba(34,53,85,0.6), rgba(34,53,85,0.6)),url("https://via.placeholder.com/1920x465");
+  @include bg-size(cover);
+  background-position: center;
+  //footer
+  .footer {
+    //&_item
+    &_item {
+      h6 {
+        font-family: $one-family;
+        @include weight(700);
+        text-transform: capitalize;
+        font-size: 24px;
+        line-height: normal;
+        color: $secondary-color;
+        margin-bottom: 50px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -20px;
+          left: 0;
+          width: 30px;
+          height: 2px;
+          background-color: $secondary-color;
+        }
+      }
+      p {
+        padding-top: 10px;
+        font-family: $two-family;
+        @include weight(400);
+        font-size: $regular-size;
+        line-height: 18px;
+        color: $base-color;
+      }
+      //social
+      .social {
+        padding-top: 60px;
+        li {
+          display: inline-block;
+          margin-right: 10px;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            i {
+              display: inline-block;
+              width: 35px;
+              height: 35px;
+              line-height: 35px;
+              @include border-radius(5px);
+              text-align: center;
+              color: $base-color;
+              background-color: $secondary-color;
+              @include transition(0.3s);
+              &:hover {
+                color: $primary-color;
+              }
+            }
+          }
+        }
+      }
+      //infos
+      .infos {
+        //info_item
+        .info_item {
+          @include flex;
+          padding-bottom: 20px;
+          &:last-child {
+            padding-bottom: 0;
+          }
+          i {color: $secondary-color; font-size: 18px;}
+          span,a {
+            padding-left: 20px;
+            color: $base-color;
+            font-family: $two-family;
+            @include weight(400);
+            font-size: $regular-size;
+            line-height: 18px;
+          }
+        }
+      }
+      //areas_link
+      .areas_link {
+        li {
+          display: block;
+          padding: 0 0 10px 32px;
+          &:last-child {
+            padding: 0 0 0 32px;
+          }
+          a {
+            font-family: $two-family;
+            @include weight(400);
+            color: $base-color;
+            font-size: $regular-size;
+            line-height: 18px;
+            position: relative;
+            &::before {
+              content: '\f178';
+              position: absolute;
+              top: 0;
+              left: -32px;
+              font-family: "lawe-font";
+              @include weight(900);
+              font-size: $large-size;
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+      //usefull_link
+      .usefull_link {
+        li {
+          display: block;
+          padding: 0 0 10px 25px;
+          &:last-child {
+            padding: 0 0 0 25px;
+          }
+          a {
+            font-family: $two-family;
+            @include weight(400);
+            color: $base-color;
+            font-size: $regular-size;
+            line-height: 18px;
+            position: relative;
+            &::before {
+              content: '\e805';
+              position: absolute;
+              top: 0;
+              left: -25px;
+              font-family: "lawe-font";
+              @include weight(900);
+              font-size: $large-size;
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+    //Large
+    @include large {
+      //&_item
+      &_item {
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    //X-Tablet
+    @include x-tablet {
+      //&_item
+      &_item {
+        h6 {
+          font-size: 20px;
+          &::before {bottom: -15px}
+        }
+        //social
+        .social {padding-top: 40px;}
+        //infos
+        .infos {
+          //info_item
+          .info_item {
+            @include flex;
+            @include flex-direction(column);
+            padding-bottom: 15px;
+            span,a {
+              padding-left: 0;
+              padding-top: 10px;
+            }
+          }
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      //&_item
+      &_item {
+        h6 {
+          font-size: 18px;
+          margin-bottom: 45px;
+        }
+        //social
+        .social {
+          padding-top: 35px;
+          li {margin-right: 5px;}
+        }
+        //infos
+        .infos {
+          //info_item
+          .info_item {
+            @include flex;
+            @include flex-direction(column);
+            padding-bottom: 15px;
+            span,a {
+              padding-left: 0;
+              padding-top: 10px;
+              font-size: 12px;
+              line-height: 16px;
+            }
+          }
+        }
+        //areas_link
+        .areas_link {
+          li {
+            padding: 0 0 5px 28px;
+            &:last-child {
+              padding: 0 0 10px 28px;
+            }
+            a {
+              font-size: 12px;
+              line-height: 16px;
+              &::before {left: -28px;}
+            }
+          }
+        }
+        //usefull_link
+        .usefull_link {
+          li {
+            padding: 0 0 5px 20px;
+            &:last-child {
+              padding: 0 0 0 20px;
+            }
+            a {
+              font-size: 12px;
+              line-height: 16px;
+              &::before {left: -20px;}
+            }
+          }
+        }
+      }
+    }
+    //Small
+    @include small {
+      //&_item
+      &_item {
+        h6 {
+          font-size: $large-size;
+          margin-bottom: 40px;
+        }
+        //infos
+        .infos {
+          //info_item
+          .info_item {
+            span,a {
+              font-size: 10px;
+              line-height: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

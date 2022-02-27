@@ -1,1 +1,417 @@
 /////HOME
+
+//Home_Slider#
+#home_slider {
+  width: 100%;
+  //home_slider
+  .home_slider {
+    position: relative;
+    //&_item
+    &_item {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(34,53,85,0.6);
+      }
+      //slider_caption
+      .slider_caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translate(-50%, -50%);
+        h5 {
+          font-family: $two-family;
+          @include weight(400);
+          font-size: 18px;
+          color: $base-color;
+          line-height: 20px;
+        }
+        h6 {
+          max-width: 610px;
+          font-family: $one-family;
+          @include weight(700);
+          font-size: 70px;
+          line-height: normal;
+          text-transform: capitalize;
+          color: $secondary-color;
+        }
+        p {
+          max-width: 550px;
+          padding-top: 5px;
+          font-family: $two-family;
+          @include weight(400);
+          font-size: $regular-size;
+          color: $base-color;
+          line-height: 19px;
+        }
+        button {
+          margin-top: 35px;
+          background-color: $secondary-color;
+          width: 160px;
+          height: 50px;
+          @include border-radius(3px);
+          a {
+            font-family: $one-family;
+            color: $base-color;
+            text-transform: capitalize;
+            @include weight(500);
+            font-size: $large-size;
+            line-height: 20px;
+          }
+        }
+      }
+      //Large
+      @include large {
+        //slider_caption
+        .slider_caption {
+          h6 {font-size: 50px;}
+        }
+      }
+      //Notebook
+      @include notebook {
+        img {height: 100vh; object-fit: cover}
+        //slider_caption
+        .slider_caption {
+          h6 {font-size: 40px;}
+        }
+      }
+      //X-Tablet
+      @include x-tablet {
+        //slider_caption
+        .slider_caption {
+          h5 {font-size: $large-size;}
+          h6 {font-size: 30px; padding-top: 10px;}
+          p {padding-top: 10px;}
+          button {
+            margin-top: 30px;
+            width: 100%;
+            height: 40px;
+            a {font-size: $regular-size;}
+          }
+        }
+      }
+      //Mobil
+      @include mobil {
+        //slider_caption
+        .slider_caption {
+          h5 {font-size: $regular-size; line-height: 18px;}
+          h6 {font-size: 20px; padding-top: 10px;}
+          p {padding-top: 10px; font-size: $small-size; line-height: 16px;}
+          button {
+            margin-top: 25px;
+            width: 100%;
+            height: 35px;
+            a {font-size: $small-size;}
+          }
+        }
+      }
+    }
+    //owl-dots
+    .owl-dots {
+      position: absolute;
+      bottom: 13%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      //owl-dot
+      .owl-dot {
+        width: 25px;
+        height: 7px;
+        background-color: $three-color;
+        @include border-radius(10px);
+        @include transition(0.3s);
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      .active {
+        width: 40px;
+        background-color: $secondary-color;
+      }
+    }
+  }
+}
+
+//Home_About#
+#home_about {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  //slider_bottom
+  .slider_bottom {
+    margin-top: -100px;
+    width: 100%;
+    padding: 60px 50px;
+    background: linear-gradient(to bottom, rgba(34,53,85,0.6), rgba(34,53,85,0.6)),url("https://via.placeholder.com/1060x166");
+    @include bg-size(cover);
+    background-position: center;
+    @include flex;
+    @include justify-content(space-between);
+    @include align-items(center);
+    //&_text
+    &_text {
+      h5 {
+        font-family: $one-family;
+        text-transform: capitalize;
+        @include weight(700);
+        line-height: normal;
+        font-size: 35px;
+        color: $secondary-color;
+      }
+      h6 {
+        padding-top: 5px;
+        font-family: $two-family;
+        color: $base-color;
+        @include weight(400);
+        font-size: $regular-size;
+        line-height: 18px;
+      }
+    }
+    //&_button
+    &_button {
+      button {
+        width: 225px;
+        height: 50px;
+        @include border-radius(3px);
+        background-color: $secondary-color;
+        a {
+          font-family: $one-family;
+          @include weight(500);
+          font-size: $large-size;
+          line-height: normal;
+          color: $base-color;
+        }
+      }
+    }
+    //Notebook
+    @include notebook {
+      margin-top: 0;
+      @include flex;
+      @include flex-direction(column);
+      text-align: center;
+      //&_text
+      &_text {
+        h5 {font-size: 25px;}
+      }
+      //&_button
+      &_button {
+        margin-top: 25px;
+        button {
+          width: 200px;
+          height: 40px;
+          a {font-size: $regular-size;}
+        }
+      }
+    }
+    //Mobil
+    @include mobil {display: none}
+  }
+  //home_about
+  .home_about {
+    padding-top: 95px;
+    //&_image
+    &_image {
+      img {width: 100%;}
+    }
+    //&_text
+    &_text {
+      h3 {
+        font-family: $one-family;
+        @include weight(700);
+        font-size: 35px;
+        text-transform: capitalize;
+        line-height: normal;
+        color: $primary-color;
+      }
+      h4 {
+        padding: 10px 0 25px 0;
+        font-family: $one-family;
+        @include weight(500);
+        font-style: italic;
+        font-size: $large-size;
+        line-height: 20px;
+        color: $secondary-color;
+      }
+      p {
+        font-family: $two-family;
+        color: $three-color;
+        font-size: $regular-size;
+        line-height: 20px;
+        @include weight(400);
+        padding-bottom: 20px;
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+      h5 {
+        padding: 20px 0 35px 0;
+        font-family: $one-family;
+        @include weight(500);
+        font-style: italic;
+        font-size: 18px;
+        line-height: 24px;
+        color: $secondary-color;
+      }
+      h6 {
+        padding-top: 5px;
+        font-family: $two-family;
+        @include weight(400);
+        font-size: $regular-size;
+        line-height: 18px;
+        color: $three-color;
+      }
+    }
+    //Notebook
+    @include notebook {
+      //&_text
+      &_text {margin-top: 30px;}
+    }
+    //Tablet
+    @include tablet {
+      //&_text
+      &_text {
+        h3 {font-size: 25px;}
+      }
+    }
+    //X-Tablet
+    @include x-tablet {
+      //&_text
+      &_text {
+        h3 {font-size: 20px;}
+        h4 {font-size: $regular-size;line-height: 18px;}
+        p {padding-bottom: 15px;}
+        h5 {font-size: $large-size; line-height: 22px; padding: 15px 0 30px 0;}
+      }
+    }
+    //Mobil
+    @include mobil {
+      //&_text
+      &_text {
+        h3 {font-size: 18px;}
+        h4 {font-size: $small-size; line-height: 15px; padding: 10px 0 20px 0;}
+        p {padding-bottom: 15px; font-size: $small-size; line-height: 16px;}
+        h5 {font-size: $regular-size; line-height: 20px; padding: 10px 0 25px 0;}
+        h6 {padding-top: 7px; font-size: $small-size; line-height: 16px;}
+      }
+    }
+  }
+}
+
+//Home_Counter#
+#home_counter {
+  width: 100%;
+  padding: 100px 0 100px 0;
+  background: linear-gradient(to bottom, rgba(34,53,85,0.6), rgba(34,53,85,0.6)),url("https://via.placeholder.com/1920x280");
+  @include bg-size(cover);
+  background-position: center;
+  //home_counter
+  .home_counter {
+    //&_item
+    &_item {
+      @include flex;
+      @include align-items(center);
+      text-align: center;
+      //icon
+      .icon {
+        i {
+          font-size: 70px;
+          color: $secondary-color;
+          @include weight(900);
+        }
+      }
+      .text {
+        padding-left: 25px;
+      }
+    }
+  }
+}
+
+//İnformaiton
+#information {
+  width: 100%;
+  padding: 40px 0;
+  background-color: $primary-color;
+  //information
+  .information {
+    @include flex;
+    @include justify-content(space-between);
+    @include align-items(center);
+    //&_text
+    &_text {
+      h5 {
+        font-family: $one-family;
+        text-transform: capitalize;
+        @include weight(700);
+        line-height: normal;
+        font-size: 35px;
+        color: $secondary-color;
+      }
+      h6 {
+        padding-top: 5px;
+        font-family: $two-family;
+        color: $base-color;
+        @include weight(400);
+        font-size: $regular-size;
+        line-height: 18px;
+      }
+    }
+    //&_button
+    &_button {
+      button {
+        width: 225px;
+        height: 50px;
+        @include border-radius(3px);
+        background-color: $secondary-color;
+        a {
+          font-family: $one-family;
+          @include weight(500);
+          font-size: $large-size;
+          line-height: normal;
+          color: $base-color;
+        }
+      }
+    }
+    //Notebook
+    @include notebook {
+      @include flex;
+      @include flex-direction(column);
+      text-align: center;
+      //&_text
+      &_text {
+        h5 {font-size: 25px;}
+      }
+      //&_button
+      &_button {
+        margin-top: 30px;
+        button {
+          width: 200px;
+          height: 40px;
+          a {font-size: $regular-size;}
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      //&_text
+      &_text {
+        h5 {font-size: 18px;}
+        h6 {font-size: 12px; line-height: normal;}
+      }
+      //&_button
+      &_button {
+        margin-top: 25px;
+        button {
+          width: 130px;
+          height: 35px;
+          a {font-size: $small-size; line-height: 22px}
+        }
+      }
+    }
+  }
+}
