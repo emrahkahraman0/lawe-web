@@ -108,7 +108,7 @@
             content: '\e803';
             font-family: "lawe-font";
             font-size: $large-size;
-            @include weight(400);
+            @include weight(100);
             color: $primary-color;
           }
         }
@@ -117,7 +117,7 @@
           position: absolute;
           top: 35px;
           left: 0;
-          z-index: 1;
+          z-index: 2;
           padding: 15px 0 18px 10px;
           background-color: $secondary-color;
           opacity: 0;
@@ -133,7 +133,8 @@
               color: $base-color;
               @include weight(bold);
               font-size: $large-size;
-              text-transform: uppercase;
+              line-height: 18px;
+              text-transform: capitalize;
               position: relative;
               &::before {
                 position: absolute;
@@ -151,6 +152,26 @@
                 &::before {
                   width: 100%;
                 }
+              }
+            }
+            .active {
+              position: relative;
+              &::before {
+                position: absolute;
+                width: 0;
+                margin: -5px 0;
+                @include transition(0.4s);
+                content: "";
+                background-color: $base-color;
+                height: 4px;
+                border-radius: 2px;
+                left: 0;
+                bottom: 0;
+              }
+            }
+            .active, a.active {
+              &::before {
+                width: 100%;
               }
             }
           }
@@ -177,7 +198,6 @@
           }
         }
         .active, a.active {
-          color: $secondary-color;
           &::before {
             width: 100%;
           }

@@ -56,4 +56,85 @@ $(document).ready(function(){
         }
     });
 
+    //Home-Counter
+    $('.count').each(function () {
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+
+    //Home_Clients
+    $('.home_clients').owlCarousel({
+        loop:true,
+        margin:20,
+        nav:false,
+        dots:true,
+        autoplay:true,
+        autoplayTimeout:4000,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            500:{
+                items:1
+            },
+            768:{
+                items:1
+            },
+            992:{
+                items:2
+            },
+            1200:{
+                items:2
+            },
+            1400:{
+                items:2
+            },
+            1600:{
+                items:2
+            }
+        }
+    });
+
+    //Brands
+    $('.brands').owlCarousel({
+        loop:true,
+        margin:20,
+        nav:false,
+        dots:false,
+        autoplay:true,
+        autoplayTimeout:4000,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            500:{
+                items:2
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            },
+            1200:{
+                items:4
+            },
+            1400:{
+                items:4
+            },
+            1600:{
+                items:4
+            }
+        }
+    });
+
 });

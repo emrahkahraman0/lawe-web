@@ -1,1 +1,291 @@
 /////ABOUT
+
+//About_Page#
+#about_page {
+  width: 100%;
+  height: 330px;
+  background: linear-gradient(to bottom, rgba(34,53,85,0.6), rgba(34,53,85,0.6)),url("https://via.placeholder.com/1920x330");
+  @include bg-size(cover);
+  background-position: center;
+  position: relative;
+  //page_text
+  .page_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+    h6 {
+      font-family: $one-family;
+      @include weight(700);
+      line-height: normal;
+      text-transform: capitalize;
+      font-size: 35px;
+      color: $secondary-color;
+    }
+    ul {
+      padding-top: 5px;
+      li {
+        display: inline-block;
+        a {
+          font-family: $two-family;
+          @include weight(400);
+          text-transform: capitalize;
+          line-height: normal;
+          font-size: $large-size;
+          color: $base-color;
+        }
+      }
+      span {color: $base-color;}
+    }
+    //Notebook
+    @include notebook {text-align: center;}
+    //Tablet
+    @include tablet {
+      h6 {font-size: 25px;}
+      ul {
+        li {
+          a {font-size: $regular-size;}
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      h6 {font-size: 18px;}
+      ul {
+        li {
+          a {font-size: $small-size;}
+        }
+      }
+    }
+  }
+}
+
+//About_İnfo#
+#about_info {
+  width: 100%;
+  padding-top: 100px;
+  //about_info
+  .about_info {
+    //&_text
+    &_text {
+      h3 {
+        font-family: $one-family;
+        @include weight(700);
+        font-size: 35px;
+        text-transform: capitalize;
+        line-height: normal;
+        color: $primary-color;
+      }
+      h4 {
+        padding: 10px 0 25px 0;
+        font-family: $one-family;
+        @include weight(500);
+        font-style: italic;
+        font-size: $large-size;
+        line-height: 20px;
+        color: $secondary-color;
+      }
+      p {
+        font-family: $two-family;
+        color: $three-color;
+        font-size: $regular-size;
+        line-height: 20px;
+        @include weight(400);
+        padding-bottom: 20px;
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+      h5 {
+        padding: 20px 0 35px 0;
+        font-family: $one-family;
+        @include weight(500);
+        font-style: italic;
+        font-size: 18px;
+        line-height: 24px;
+        color: $secondary-color;
+      }
+      h6 {
+        padding-top: 5px;
+        font-family: $two-family;
+        @include weight(400);
+        font-size: $regular-size;
+        line-height: 18px;
+        color: $three-color;
+      }
+    }
+    //&_image
+    &_image {
+      img {width: 100%;}
+    }
+    //Notebook
+    @include notebook {
+      //&_image
+      &_image {margin-top: 30px;}
+    }
+    //Tablet
+    @include tablet {
+      //&_text
+      &_text {
+        h3 {font-size: 25px;}
+      }
+    }
+    //X-Tablet
+    @include x-tablet {
+      //&_text
+      &_text {
+        h3 {font-size: 20px;}
+        h4 {font-size: $regular-size;line-height: 18px;}
+        p {padding-bottom: 15px;}
+        h5 {font-size: $large-size; line-height: 22px; padding: 15px 0 30px 0;}
+      }
+    }
+    //Mobil
+    @include mobil {
+      //&_text
+      &_text {
+        h3 {font-size: 18px;}
+        h4 {font-size: $small-size; line-height: 15px; padding: 10px 0 20px 0;}
+        p {padding-bottom: 15px; font-size: $small-size; line-height: 16px;}
+        h5 {font-size: $regular-size; line-height: 20px; padding: 10px 0 25px 0;}
+        h6 {padding-top: 7px; font-size: $small-size; line-height: 16px;}
+      }
+    }
+  }
+}
+
+//About_WeAre#
+#about_weAre {
+  width: 100%;
+  padding: 100px 0;
+  //about_weAre
+  .about_weAre {
+    //&_left
+    &_left {
+      h5 {
+        font-family: $one-family;
+        @include weight(700);
+        font-size: 48px;
+        line-height: normal;
+        color: $primary-color;
+      }
+      h6 {
+        padding-top: 10px;
+        font-family: $one-family;
+        @include weight(500);
+        font-size: $large-size;
+        line-height: 20px;
+        color: $secondary-color;
+      }
+      p {
+        padding-top: 25px;
+        font-family: $two-family;
+        @include weight(400);
+        font-size: $regular-size;
+        line-height: 18px;
+        color: $three-color;
+        &:last-child {
+          padding: 20px 0 0 0;
+        }
+      }
+      //Large
+      @include large {
+        h5 {font-size: 40px;}
+      }
+      //Notebook
+      @include notebook {
+        h5 {font-size: 30px;}
+      }
+      //Tablet
+      @include tablet {
+        h5 {font-size: 22px;}
+        h6 {font-size: $regular-size; line-height: 18px;}
+      }
+      //Mobil
+      @include mobil {
+        h5 {font-size: 18px;}
+        h6 {font-size: $small-size; line-height: 18px; padding-top: 7px;}
+        p {
+          padding-top: 20px; font-size: $small-size; line-height: 16px;
+          &:last-child {
+            padding: 15px 0 0 0;
+          }
+        }
+      }
+    }
+    //&_right
+    &_right {
+      //weAre_item
+      .weAre_item {
+        @include flex;
+        i {
+          font-size: 35px;
+          color: $secondary-color;
+          &::before {
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+        //text
+        .text {
+          padding-left: 15px;
+          h6 {
+            font-family: $one-family;
+            @include weight(700);
+            font-size: 24px;
+            line-height: normal;
+            color: $five-color;
+          }
+          p {
+            padding-top: 10px;
+            font-family: $two-family;
+            @include weight(400);
+            color: $three-color;
+            font-size: $regular-size;
+            line-height: 18px;
+          }
+        }
+      }
+      //Large
+      @include large {
+        //weAre_item
+        .weAre_item {
+          margin-bottom: 15px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          //text
+          .text {
+            h6 {font-size: 22px;}
+          }
+        }
+      }
+      //Notebook
+      @include notebook {margin-top: 30px;}
+      //Tablet
+      @include tablet {
+        //weAre_item
+        .weAre_item {
+          @include flex;
+          @include flex-direction(column);
+          //text
+          .text {
+            padding: 10px 0 0 0;
+            h6 {font-size: 18px;}
+          }
+        }
+      }
+      //Mobil
+      @include mobil {
+        //weAre_item
+        .weAre_item {
+          //text
+          .text {
+            h6 {font-size: $large-size;}
+            p {font-size: $small-size; line-height: 16px; padding-top: 8px;}
+          }
+        }
+      }
+    }
+  }
+}
