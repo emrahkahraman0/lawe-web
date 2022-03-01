@@ -1,1 +1,157 @@
 /////HİSTORYS
+
+//Historys_Page#
+#historys_page {
+  width: 100%;
+  height: 330px;
+  background: linear-gradient(to bottom, rgba(34,53,85,0.6), rgba(34,53,85,0.6)),url("https://via.placeholder.com/1920x330");
+  @include bg-size(cover);
+  background-position: center;
+  position: relative;
+  //page_text
+  .page_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+    h6 {
+      font-family: $one-family;
+      @include weight(700);
+      line-height: normal;
+      text-transform: capitalize;
+      font-size: 35px;
+      color: $secondary-color;
+    }
+    ul {
+      padding-top: 5px;
+      li {
+        display: inline-block;
+        a {
+          font-family: $two-family;
+          @include weight(400);
+          text-transform: capitalize;
+          line-height: normal;
+          font-size: $large-size;
+          color: $base-color;
+        }
+      }
+      span {color: $base-color;}
+    }
+    //Notebook
+    @include notebook {text-align: center;}
+    //Tablet
+    @include tablet {
+      h6 {font-size: 25px;}
+      ul {
+        li {
+          a {font-size: $regular-size;}
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      h6 {font-size: 18px;}
+      ul {
+        li {
+          a {font-size: $small-size;}
+        }
+      }
+    }
+  }
+}
+
+//Our_Historys
+#our_historys {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #F4F4F4;
+  //our_historys
+  .our_historys {
+    //&_content
+    &_content {
+      padding: 60px 0 60px 0;
+      border-bottom: 2px solid $secondary-color;
+      &:first-child {
+        padding: 0 0 60px 0;
+      }
+      &:last-child {
+        padding: 60px 0 0 0;
+        border-bottom: 0;
+      }
+      //history_heading
+      .history_heading {
+        h4 {
+          font-family: $one-family;
+          font-size: 35px;
+          text-transform: capitalize;
+          @include weight(700);
+          line-height: normal;
+          color: $primary-color;
+        }
+        h5 {
+          padding-top: 10px;
+          font-family: $one-family;
+          font-size: $large-size;
+          @include weight(500);
+          font-style: italic;
+          line-height: 20px;
+          color: $secondary-color;
+        }
+        //Notebook
+        @include notebook {
+          @include flex;
+          @include flex-direction(column);
+          @include align-self(center);
+          h4 {font-size: 25px;}
+        }
+        //Mobil
+        @include mobil {
+          h4 {font-size: 18px;}
+          h5 {padding-top: 7px; font-size: $regular-size; line-height: 18px;}
+        }
+      }
+      //history_desc
+      .history_desc {
+        h6 {
+          font-family: $one-family;
+          font-size: 24px;
+          @include weight(700);
+          line-height: normal;
+          color: $primary-color;
+        }
+        p {
+          padding-top: 20px;
+          font-family: $two-family;
+          font-size: $large-size;
+          color: $three-color;
+          line-height: 20px;
+          @include weight(400);
+        }
+        //Notebook
+        @include notebook {
+          h6 {font-size: 20px;}
+        }
+        //Tablet
+        @include tablet {
+          margin-top: 30px;
+          h6 {font-size: 18px;}
+          p {padding-top: 15px; font-size: $regular-size; line-height: 18px;}
+        }
+        //Mobil
+        @include mobil {
+          margin-top: 30px;
+          h6 {font-size: $large-size;}
+          p {font-size: $small-size; line-height: 16px;}
+        }
+      }
+      //history_image
+      .history_image {
+        img {width: 100%;}
+        //Notebook
+        @include notebook {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
