@@ -67,6 +67,7 @@
       z-index: 3;
       img {
         cursor: pointer;
+        filter: invert(0);
       }
     }
     //menu
@@ -115,7 +116,7 @@
         ul {
           width: 200px;
           position: absolute;
-          top: 35px;
+          top: 48px;
           left: 0;
           z-index: 2;
           padding: 15px 0 18px 10px;
@@ -296,8 +297,37 @@
 }
 
 #header.fixed {
+  background-color: $secondary-color;
   @include box-shadow2(0px, 3px, 10px, 0px, rgba(0,0,0,0.36));
+  @include transition(0.3s);
   position: sticky;
   top: 0;
   z-index: 2;
+  //header_wrapper
+  .header-wrapper {
+    height: 80px;
+    @include transition(0.3s);
+    //logo
+    .logo {
+      img {
+        filter: invert(100%);
+      }
+    }
+    //menu
+    .menu {
+      li {
+        a {
+          color: $base-color;
+          &::before {background-color: $base-color;}
+          &:not(:only-child):after {color: $base-color;}
+        }
+      }
+    }
+    //hamburger
+    .hamburger {
+      top: 23px;
+      @include transition(0.3s);
+      i {color: $base-color;}
+    }
+  }
 }

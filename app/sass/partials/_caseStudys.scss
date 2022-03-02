@@ -1,1 +1,139 @@
 /////CASE-STUDYS
+
+//CaseStudy_Page#
+#caseStudy_page {
+    width: 100%;
+    height: 330px;
+    background: linear-gradient(to bottom, rgba(34,53,85,0.6), rgba(34,53,85,0.6)),url("https://via.placeholder.com/1920x330");
+    @include bg-size(cover);
+    background-position: center;
+    position: relative;
+    //page_text
+    .page_text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include translate(-50%, -50%);
+      h6 {
+        font-family: $one-family;
+        @include weight(700);
+        line-height: normal;
+        text-transform: capitalize;
+        font-size: 35px;
+        color: $secondary-color;
+      }
+      ul {
+        padding-top: 5px;
+        li {
+          display: inline-block;
+          a {
+            font-family: $two-family;
+            @include weight(400);
+            text-transform: capitalize;
+            line-height: normal;
+            font-size: $large-size;
+            color: $base-color;
+          }
+        }
+        span {color: $base-color;}
+      }
+      //Notebook
+      @include notebook {text-align: center;}
+      //Tablet
+      @include tablet {
+        h6 {font-size: 25px;}
+        ul {
+          li {
+            a {font-size: $regular-size;}
+          }
+        }
+      }
+      //Mobil
+      @include mobil {
+        h6 {font-size: 18px;}
+        ul {
+          li {
+            a {font-size: $small-size;}
+          }
+        }
+      }
+    }
+}
+
+//our_caseStudy#
+#our_caseStudy {
+    width: 100%;
+    padding: 100px 0 70px 0;
+    //our_caseStudy
+    .our_caseStudy {
+        //&_item
+        &_item {
+            margin-bottom: 30px;
+            img {width: 100%;}
+            //caseStudy_caption
+            .caseStudy_caption {
+                margin-top: -2px;
+                width: 100%;
+                min-height: 190px;
+                padding: 25px 35px;
+                background-color: #EEEEEE;
+                h6 {
+                    line-height: normal;
+                    a {
+                        font-family: $one-family;
+                        @include weight(700);
+                        color: $five-color;
+                        font-size: 24px;
+                    }
+                }
+                h5 {
+                    padding-top: 10px;
+                    color: $secondary-color;
+                    font-family: $one-family;
+                    @include weight(400);
+                    font-size: $regular-size;
+                    line-height: 18px;
+                }
+                //read_more
+                .read_more {
+                    padding-top: 20px;
+                    display: inline-block;
+                    color: $secondary-color;
+                    font-size: 22px;
+                }
+                //Notebook
+                @include notebook {
+                    h6 {
+                        a {font-size: 22px;}
+                    }
+                }
+                //Tablet
+                @include tablet {
+                    min-height: 160px;
+                    padding: 20px 30px;
+                    h6 {
+                        a {font-size: 18px;}
+                    }
+                }
+                //X-Tablet
+                @include x-tablet {
+                    min-height: 140px;
+                    padding: 20px 25px;
+                    h6 {
+                        a {font-size: $large-size;}
+                    }
+                    h5 {padding-top: 7px;}
+                }
+                //Mobil
+                @include mobil {
+                    min-height: 140px;
+                    padding: 15px 20px;
+                    h6 {
+                        a {font-size: $regular-size;}
+                    }
+                    h5 {padding-top: 5px; font-size: $small-size;}
+                }
+            }
+        }
+    }
+}

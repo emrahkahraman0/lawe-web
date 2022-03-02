@@ -1,1 +1,349 @@
 /////ATTORNEYS
+
+//Attorneys_Page#
+#attorneys_page {
+  width: 100%;
+  height: 330px;
+  background: linear-gradient(to bottom, rgba(34,53,85,0.6), rgba(34,53,85,0.6)),url("https://via.placeholder.com/1920x330");
+  @include bg-size(cover);
+  background-position: center;
+  position: relative;
+  //page_text
+  .page_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+    h6 {
+      font-family: $one-family;
+      @include weight(700);
+      line-height: normal;
+      text-transform: capitalize;
+      font-size: 35px;
+      color: $secondary-color;
+    }
+    ul {
+      padding-top: 5px;
+      li {
+        display: inline-block;
+        a {
+          font-family: $two-family;
+          @include weight(400);
+          text-transform: capitalize;
+          line-height: normal;
+          font-size: $large-size;
+          color: $base-color;
+        }
+      }
+      span {color: $base-color;}
+    }
+    //Notebook
+    @include notebook {text-align: center;}
+    //Tablet
+    @include tablet {
+      h6 {font-size: 25px;}
+      ul {
+        li {
+          a {font-size: $regular-size;}
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      h6 {font-size: 18px;}
+      ul {
+        li {
+          a {font-size: $small-size;}
+        }
+      }
+    }
+  }
+}
+
+//Attorneys_Ceo#
+#attorneys_ceo {
+  width: 100%;
+  padding: 100px 0 100px 0;
+  //attorneys_ceo
+  .attorneys_ceo {
+    //&_text
+    &_text {
+      h4 {
+        font-family: $one-family;
+        color: $primary-color;
+        @include weight(700);
+        font-size: 48px;
+        line-height: normal;
+      }
+      h5 {
+        padding-top: 5px;
+        font-family: $one-family;
+        color: $secondary-color;
+        @include weight(500);
+        font-style: italic;
+        font-size: $large-size;
+        line-height: 21px;
+      }
+      p {
+        padding-top: 20px;
+        color: $three-color;
+        font-family: $two-family;
+        @include weight(regular);
+        font-size: $regular-size;
+        line-height: 18px;
+      }
+      h6 {
+        padding-top: 20px;
+        font-family: $one-family;
+        @include weight(500);
+        font-size: 18px;
+        line-height: 24px;
+        color: $secondary-color;
+        font-style: italic;
+      }
+      img {margin: 30px 0;}
+      //social
+      .social {
+        h3 {
+          font-family: $one-family;
+          @include weight(500);
+          font-style: italic;
+          color: $secondary-color;
+          font-size: $large-size;
+          line-height: 21px;
+          padding-bottom: 10px;
+        }
+        li {
+          display: inline-block;
+          margin-right: 5px;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            i {
+              display: inline-block;
+              width: 35px;
+              height: 35px;
+              line-height: 35px;
+              text-align: center;
+              background-color: $primary-color;
+              @include border-radius(5px);
+              color: $secondary-color;
+              font-size: 18px;
+              @include transition(0.3s);
+              &:hover {
+                background-color: $secondary-color;
+                color: $primary-color;
+              }
+              &::before {margin-left: 0; margin-right: 0;}
+            }
+          }
+        }
+      }
+    }
+    //&_image
+    &_image {
+      img {width: 100%;}
+    }
+    //Notebook
+    @include notebook {
+      //&_text
+      &_text {
+        h4 {font-size: 35px;}
+      }
+      //&_image
+      &_image {margin-top: 30px;}
+    }
+    //Tablet
+    @include tablet {
+      //&_text
+      &_text {
+        h4 {font-size: 25px;}
+        h6 {font-size: $large-size; line-height: 22px;}
+      }
+    }
+    //X-Tablet
+    @include x-tablet {
+      //&_text
+      &_text {
+        h4 {font-size: 20px;}
+        h5 {padding-top: 7px;}
+        h6 {font-size: $regular-size; line-height: 20px;}
+      }
+    }
+    //Mobil
+    @include mobil {
+      //&_text
+      &_text {
+        h4 {font-size: $large-size;}
+        h5 {font-size: $regular-size; line-height: normal;}
+        p {font-size: $small-size; line-height: 16px;}
+        h6 {font-size: $small-size; line-height: 16px;}
+        //social
+        .social {
+          h3 {font-size: $regular-size; line-height: normal;}
+          li {
+            margin-right: 5px;
+            a {
+              i {font-size: $large-size;}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Attorneys_Meets#
+#attorneys_meets {
+  width: 100%;
+  padding-bottom: 50px;
+  //title
+  .title {
+    text-align: center;
+    h6 {
+      font-family: $one-family;
+      @include weight(700);
+      font-size: 45px;
+      line-height: normal;
+      color: $secondary-color;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -45px;
+        left: 0;
+        right: 0;
+        width: 108px;
+        height: 26px;
+        margin: 0 auto;
+        background-image: url("/img/before.png");
+      }
+    }
+    p {
+      padding-top: 70px;
+      font-family: $two-family;
+      @include weight(400);
+      font-size: $regular-size;
+      color: $three-color;
+      line-height: 18px;
+    }
+    //Notebook
+    @include notebook {
+      h6 {font-size: 35px;}
+    }
+    //Tablet
+    @include tablet {
+      h6 {font-size: 25px;}
+    }
+    //Mobil
+    @include mobil {
+      h6 {font-size: 18px;}
+      p {font-size: $small-size; line-height: 16px;}
+    }
+  }
+  //attorneys_meets
+  .attorneys_meets {
+    padding-top: 50px;
+    //&_item
+    &_item {
+      margin-bottom: 50px;
+      img {width: 100%;}
+      h5 {
+        padding-top: 10px;
+        line-height: 30px;
+        a {
+          font-family: $one-family;
+          @include weight(700);
+          text-transform: capitalize;
+          font-size: 24px;
+          color: $primary-color;
+        }
+      }
+      .job {
+        padding-top: 5px;
+        font-family: $one-family;
+        @include weight(400);
+        font-size: $large-size;
+        line-height: normal;
+        color: $secondary-color;
+        font-style: italic;
+      }
+      //social
+      .social {
+        padding-top: 25px;
+        li {
+          display: inline-block;
+          margin-right: 5px;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            i {
+              display: inline-block;
+              width: 35px;
+              height: 35px;
+              line-height: 35px;
+              text-align: center;
+              background-color: $primary-color;
+              @include border-radius(5px);
+              color: $secondary-color;
+              font-size: 18px;
+              @include transition(0.3s);
+              &:hover {
+                background-color: $secondary-color;
+                color: $primary-color;
+              }
+              &::before {margin-left: 0; margin-right: 0;}
+            }
+          }
+        }
+      }
+    }
+    //Tablet
+    @include tablet {
+      text-align: center;
+      //&_item
+      &_item {
+        h5 {
+          line-height: 25px;
+          a {font-size: 20px;}
+        }
+        .job {padding-top: 6px;}
+      }
+    }
+    //X-Tablet
+    @include x-tablet {
+      //&_item
+      &_item {
+        h5 {
+          padding-top: 15px;
+          line-height: 22px;
+          a {font-size: 18px;}
+        }
+        .job {padding-top: 6px;}
+      }
+    }
+    //Mobil
+    @include mobil {
+      //&_item
+      &_item {
+        h5 {
+          line-height: 20px;
+          a {font-size: $large-size;}
+        }
+        .job {padding-top: 6px; font-size: $regular-size;}
+        //social
+        .social {
+          padding-top: 20px;
+          li {
+            margin-right: 5px;
+            a {
+              i {font-size: $large-size;}
+            }
+          }
+        }
+      }
+    }
+  }
+}

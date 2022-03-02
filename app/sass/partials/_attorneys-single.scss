@@ -1,1 +1,603 @@
 /////ATTORNEYS-SİNGLE
+
+//Attorneys_Single_Page#
+#attorneys_single_page {
+  width: 100%;
+  height: 330px;
+  background: linear-gradient(to bottom, rgba(34,53,85,0.6), rgba(34,53,85,0.6)),url("https://via.placeholder.com/1920x330");
+  @include bg-size(cover);
+  background-position: center;
+  position: relative;
+  //page_text
+  .page_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+    h6 {
+      font-family: $one-family;
+      @include weight(700);
+      line-height: normal;
+      text-transform: capitalize;
+      font-size: 35px;
+      color: $secondary-color;
+    }
+    ul {
+      padding-top: 5px;
+      li {
+        display: inline-block;
+        a {
+          font-family: $two-family;
+          @include weight(400);
+          text-transform: capitalize;
+          line-height: normal;
+          font-size: $large-size;
+          color: $base-color;
+        }
+      }
+      span {color: $base-color;}
+    }
+    //Notebook
+    @include notebook {text-align: center;}
+    //Tablet
+    @include tablet {
+      h6 {font-size: 25px;}
+      ul {
+        li {
+          a {font-size: $regular-size;}
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      h6 {font-size: 18px;}
+      ul {
+        li {
+          a {font-size: $small-size;}
+        }
+      }
+    }
+  }
+}
+
+//Attorneys_Details#
+#attorneys_details {
+  width: 100%;
+  padding: 100px 0;
+  //attorneys_details
+  .attorneys_details {
+    //&_text
+    &_text {
+      h4 {
+        font-family: $one-family;
+        color: $primary-color;
+        @include weight(700);
+        font-size: 48px;
+        line-height: normal;
+      }
+      h5 {
+        padding-top: 5px;
+        font-family: $one-family;
+        color: $secondary-color;
+        @include weight(500);
+        font-style: italic;
+        font-size: $large-size;
+        line-height: 21px;
+      }
+      p {
+        padding-top: 20px;
+        color: $three-color;
+        font-family: $two-family;
+        @include weight(regular);
+        font-size: $regular-size;
+        line-height: 18px;
+      }
+      //attorney_info
+      .attorney_info {
+        padding-top: 25px;
+        //info_item
+        .info_item {
+          @include flex;
+          @include align-items(center);
+          padding-bottom: 10px;
+          &:last-child {
+            padding-bottom: 0;
+          }
+          i {
+            font-size: 18px;
+            color: $five-color;
+            &::before {
+              margin-left: 0;
+              margin-right: 0;
+            }
+          }
+          span,a {
+            padding-left: 10px;
+            font-family: $two-family;
+            font-size: $regular-size;
+            line-height: 18px;
+            color: $five-color;
+          }
+        }
+      }
+      h6 {
+        padding-top: 20px;
+        font-family: $one-family;
+        @include weight(500);
+        font-size: 18px;
+        line-height: 24px;
+        color: $secondary-color;
+        font-style: italic;
+      }
+      img {margin: 30px 0;}
+      //social
+      .social {
+        h3 {
+          font-family: $one-family;
+          @include weight(500);
+          font-style: italic;
+          color: $secondary-color;
+          font-size: $large-size;
+          line-height: 21px;
+          padding-bottom: 10px;
+        }
+        li {
+          display: inline-block;
+          margin-right: 5px;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            i {
+              display: inline-block;
+              width: 35px;
+              height: 35px;
+              line-height: 35px;
+              text-align: center;
+              background-color: $primary-color;
+              @include border-radius(5px);
+              color: $secondary-color;
+              font-size: 18px;
+              @include transition(0.3s);
+              &:hover {
+                background-color: $secondary-color;
+                color: $primary-color;
+              }
+              &::before {margin-left: 0; margin-right: 0;}
+            }
+          }
+        }
+      }
+    }
+    //&_image
+    &_image {
+      img {width: 100%;}
+    }
+    //Notebook
+    @include notebook {
+      //&_text
+      &_text {
+        h4 {font-size: 35px;}
+      }
+      //&_image
+      &_image {margin-top: 30px;}
+    }
+    //Tablet
+    @include tablet {
+      //&_text
+      &_text {
+        h4 {font-size: 25px;}
+        h6 {font-size: $large-size; line-height: 22px;}
+      }
+    }
+    //X-Tablet
+    @include x-tablet {
+      //&_text
+      &_text {
+        h4 {font-size: 20px;}
+        h5 {padding-top: 7px;}
+        h6 {font-size: $regular-size; line-height: 20px;}
+      }
+    }
+    //Mobil
+    @include mobil {
+      //&_text
+      &_text {
+        h4 {font-size: $large-size;}
+        h5 {font-size: $regular-size; line-height: normal;}
+        p {font-size: $small-size; line-height: 16px;}
+        //attorney_info
+        .attorney_info {
+          //info_item
+          .info_item {
+            @include flex;
+            @include flex-direction(column);
+            @include align-items(flex-start);
+            padding-bottom: 15px;
+            span, a {
+              padding-left: 0;
+              padding-top: 6px;
+              font-size: $small-size;
+              line-height: 17px;
+            }
+          }
+        }
+        h6 {font-size: $small-size; line-height: 16px;}
+        //social
+        .social {
+          h3 {font-size: $regular-size; line-height: normal;}
+          li {
+            margin-right: 5px;
+            a {
+              i {font-size: $large-size;}
+            }
+          }
+        }
+      }
+    }
+    //Small
+    @include small {
+      //attorney_info
+      .attorney_info {
+        //info_item
+        .info_item {
+          padding-bottom: 10px;
+          span, a {
+            font-size: 11px;
+            line-height: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//School_Work#
+#school_work {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #F0F0F0;
+  //school_work
+  .school_work {
+    //&_item
+    &_item {
+      h5 {
+        font-family: $one-family;
+        @include weight(700);
+        font-size: 48px;
+        line-height: normal;
+        color: $primary-color;
+      }
+      h6 {
+        padding-top: 5px;
+        font-family: $one-family;
+        @include weight(500);
+        font-size: $large-size;
+        line-height: 21px;
+        color: $secondary-color;
+      }
+      //education, .career
+      .education, .career {
+        padding-top: 25px;
+        //education_item, .career_item
+        .education_item, .career_item {
+          padding-bottom: 50px;
+          &:last-child {
+            padding-bottom: 0;
+          }
+          h4 {
+            color: $five-color;
+            font-family: $one-family;
+            @include weight(700);
+            font-size: 24px;
+            line-height: normal;
+            padding-left: 25px;
+            position: relative;
+            &::before {
+              content: '\e803';
+              font-family: "lawe-font";
+              color: $primary-color;
+              position: absolute;
+              top: 3px;
+              left: 0;
+            }
+          }
+          p {
+            padding-top: 10px;
+            font-family: $two-family;
+            color: $three-color;
+            font-size: $regular-size;
+            line-height: 18px;
+            @include weight(400);
+          }
+        }
+      }
+      //Large
+      @include large {
+        h5 {font-size: 35px;}
+        //education, .career
+        .education, .career {
+          //education_item, .career_item
+          .education_item, .career_item {
+            h4 {font-size: 22px;}
+          }
+        }
+      }
+      //Notebook
+      @include notebook {
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        h5 {font-size: 30px;}
+        //education, .career
+        .education, .career {
+          //education_item, .career_item
+          .education_item, .career_item {
+            h4 {font-size: 20px;}
+          }
+        }
+      }
+      //Tablet
+      @include tablet {
+        h5 {font-size: 22px;}
+        h6 {font-size: $regular-size; line-height: 18px;}
+        //education, .career
+        .education, .career {
+          //education_item, .career_item
+          .education_item, .career_item {
+            padding-bottom: 30px;
+            h4 {
+              font-size: $large-size; padding-left: 20px;
+              &::before {top: 2px;}
+            }
+          }
+        }
+      }
+      //Mobil
+      @include mobil {
+        h5 {font-size: 18px;}
+        h6 {font-size: $small-size; line-height: 16px;}
+        //education, .career
+        .education, .career {
+          //education_item, .career_item
+          .education_item, .career_item {
+            padding-bottom: 25px;
+            h4 {font-size: $regular-size;}
+          }
+        }
+      }
+    }
+  }
+}
+
+//Skills_Awards#
+#skills_awards {
+  width: 100%;
+  padding: 100px 0;
+  //skills_awards
+  .skills_awards {
+    //&_skill
+    &_skill {
+      h5 {
+        font-family: $one-family;
+        @include weight(700);
+        font-size: 48px;
+        line-height: normal;
+        color: $primary-color;
+      }
+      h6 {
+        padding-top: 5px;
+        font-family: $one-family;
+        @include weight(500);
+        font-size: $large-size;
+        line-height: 21px;
+        color: $secondary-color;
+      }
+      .skills {
+        width: 100%;
+        float: left;
+        padding-top: 40px;
+        .skill {
+          width: 100%;
+          float: left;
+          .skill-title, .skill-bar {
+            width: 100%;
+            float: left;
+          }
+          margin-bottom: 15px;
+          .skill-title {
+            font-family: $one-family;
+            color: $five-color;
+            @include weight(500);
+            margin-bottom: 5px;
+            font-size: $large-size;
+            line-height: normal;
+          }
+          .skill-bar {
+            width: 0;
+            height: 20px;
+            background: $four-color;
+            transition: 1s cubic-bezier(1, 0, 0.5, 1);
+            -webkit-transition: 1s cubic-bezier(1, 0, 0.5, 1);
+            -ms-transition: 1s cubic-bezier(1, 0, 0.5, 1);
+          }
+        }
+        &.active .skill .skill-bar {
+          width: 100%;
+        }
+        .skill .skill-bar span {
+          float: left;
+          width: 0%;
+          background: $primary-color;
+          height: 20px;
+          position: relative;
+          transition: 1s cubic-bezier(1, 0, 0.5, 1);
+          -webkit-transition: 1s cubic-bezier(1, 0, 0.5, 1);
+          -ms-transition: 1s cubic-bezier(1, 0, 0.5, 1);
+          b {
+            float: left;
+            width: 100%;
+            position: relative;
+            top: -1px;
+            right: 15px;
+            text-align: right;
+            opacity: 0;
+            color: $base-color;
+            font-family: $one-family;
+            @include weight(500);
+            font-size: $large-size;
+            line-height: normal;
+          }
+        }
+      }
+      //Large
+      @include large {
+        h5 {font-size: 35px;}
+      }
+      //Notebook
+      @include notebook {
+        h5 {font-size: 30px;}
+      }
+      //Tablet
+      @include tablet {
+        h5 {font-size: 22px;}
+        h6 {font-size: $regular-size; line-height: 18px;}
+      }
+      //X-Tablet
+      @include x-tablet {
+        //skills
+        .skills {
+          .skill .skill-bar span {
+            b {font-size: $regular-size; top: 0;}
+          }
+          //skill
+          .skill {
+            .skill-title {font-size: $regular-size;}
+          }
+        }
+      }
+      //Mobil
+      @include mobil {
+        h5 {font-size: 18px;}
+        h6 {font-size: $small-size; line-height: 16px;}
+        //skills
+        .skills {
+          .skill .skill-bar span {
+            b {font-size: $small-size; top: 2px;}
+          }
+          //skill
+          .skill {
+            .skill-title {font-size: $small-size;}
+          }
+        }
+      }
+    }
+    //&_award
+    &_award {
+      h5 {
+        font-family: $one-family;
+        @include weight(700);
+        font-size: 48px;
+        line-height: normal;
+        color: $primary-color;
+      }
+      h6 {
+        padding-top: 5px;
+        font-family: $one-family;
+        @include weight(500);
+        font-size: $large-size;
+        line-height: 21px;
+        color: $secondary-color;
+      }
+      //funFact
+      .funFact {
+        padding-top: 30px;
+        //funFact_item
+        .funFact_item {
+          padding-bottom: 50px;
+          &:last-child {
+            padding-bottom: 0;
+          }
+          h4 {
+            color: $five-color;
+            font-family: $one-family;
+            @include weight(700);
+            font-size: 24px;
+            line-height: normal;
+            padding-left: 25px;
+            position: relative;
+            &::before {
+              content: '\e803';
+              font-family: "lawe-font";
+              color: $primary-color;
+              position: absolute;
+              top: 3px;
+              left: 0;
+            }
+          }
+          p {
+            padding-top: 10px;
+            font-family: $two-family;
+            color: $three-color;
+            font-size: $regular-size;
+            line-height: 18px;
+            @include weight(400);
+          }
+        }
+      }
+      //Large
+      @include large {
+        h5 {font-size: 35px;}
+        //funFact
+        .funFact {
+          //funFact_item
+          .funFact_item {
+            h4 {font-size: 22px;}
+          }
+        }
+      }
+      //Notebook
+      @include notebook {
+        margin-top: 30px;
+        h5 {font-size: 30px;}
+        //funFact
+        .funFact {
+          //funFact_item
+          .funFact_item {
+            h4 {font-size: 20px;}
+          }
+        }
+      }
+      //Tablet
+      @include tablet {
+        h5 {font-size: 22px;}
+        h6 {font-size: $regular-size; line-height: 18px;}
+        //funFact
+        .funFact {
+          //funFact_item
+          .funFact_item {
+            padding-bottom: 30px;
+            h4 {
+              font-size: $large-size; padding-left: 20px;
+              &::before {top: 2px;}
+            }
+          }
+        }
+      }
+      //Mobil
+      @include mobil {
+        h5 {font-size: 18px;}
+        h6 {font-size: $small-size; line-height: 16px;}
+        //funFact
+        .funFact {
+          //funFact_item
+          .funFact_item {
+            padding-bottom: 25px;
+            h4 {font-size: $regular-size;}
+          }
+        }
+      }
+    }
+  }
+}
