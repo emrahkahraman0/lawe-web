@@ -68,6 +68,7 @@
   z-index: 1;
   //contact_info
   .contact_info {
+    margin-top: -240px;
     padding: 50px 0;
     background-color: $primary-color;
     //info_item
@@ -109,6 +110,7 @@
     }
     //Notebook
     @include notebook {
+      margin-top: 0;
       //info_item
       .info_item {
         margin-bottom: 30px;
@@ -124,6 +126,132 @@
         i {font-size: 35px;}
         h6 {font-size: 20px;}
         a,p {font-size: $large-size;}
+      }
+    }
+    //X-Tablet
+    @include x-tablet {
+      //info_item
+      .info_item {
+        i {font-size: 30px;}
+        h6 {font-size: 18px; padding-top: 15px;}
+        a,p {font-size: $regular-size; line-height: 20px;}
+      }
+    }
+    //Mobil
+    @include mobil {
+      //info_item
+      .info_item {
+        i {font-size: 30px;}
+        h6 {font-size: $large-size; padding-top: 10px;}
+        a,p {font-size: $small-size; line-height: 18px;}
+      }
+    }
+  }
+  //our_contact
+  .our_contact {
+    padding-top: 100px;
+    h6 {
+      text-align: center;
+      font-family: $one-family;
+      @include weight(700);
+      font-size: 45px;
+      line-height: normal;
+      color: $primary-color;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        right: 0;
+        width: 108px;
+        height: 26px;
+        margin: 0 auto;
+        background-image: url("../../img/before.png");
+      }
+      //Notebook
+      @include notebook {font-size: 35px;}
+      //Tablet
+      @include tablet {font-size: 25px;}
+      //X-Tablet
+      @include x-tablet {font-size: 20px;}
+      //Mobil
+      @include mobil {font-size: $large-size;}
+    }
+    //form_control
+    .form_control {
+      padding-top: 100px;
+      //form_item
+      .form_item {
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        label {
+          font-family: $two-family;
+          @include weight(400);
+          color: $five-color;
+          font-size: 18px;
+          line-height: normal;
+        }
+        input {
+          width: 100%;
+          height: 50px;
+          padding: 0 10px;
+          background-color: transparent;
+          border: 1px solid $three-color;
+        }
+        textarea {
+          width: 100%;
+          padding: 20px 15px;
+          background-color: transparent;
+          border: 1px solid $three-color;
+        }
+      }
+      button {
+        @include border-radius(3px);
+        width: 160px;
+        height: 50px;
+        background-color: $secondary-color;
+        a {
+          font-family: $one-family;
+          @include weight(500);
+          font-size: $large-size;
+          color: $base-color;
+        }
+      }
+      //Notebook
+      @include notebook {
+        text-align: center;
+        //form_item
+        .form_item {
+          label {font-size: $large-size;}
+          input {height: 40px;}
+        }
+      }
+      //X-Tablet
+      @include x-tablet {
+        text-align: center;
+        //form_item
+        .form_item {
+          label {font-size: $regular-size;}
+        }
+        button {
+          width: 100%; height: 40px;
+          a {font-size: $regular-size; line-height: normal;}
+        }
+      }
+      //Mobil
+      @include mobil {
+        //form_item
+        .form_item {
+          label {font-size: $small-size;}
+          input {height: 35px;}
+        }
+        button {
+          height: 35px;
+          a {font-size: $small-size;}
+        }
       }
     }
   }

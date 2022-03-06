@@ -73,7 +73,7 @@
       .detail_desc {
         @include flex;
         @include justify-content(space-between);
-        @include align-items(center);
+        
         //detail_head
         .detail_head {
           h5 {
@@ -97,18 +97,19 @@
         //detail_button
         .detail_button {
           button {
+            width: 25px;
+            height: 55px;
             border: 1px solid #555555;
-            padding: 10px 25px;
             background-color: #F4F4F4;
             a {
               color: $three-color;
               @include flex;
               @include align-items(center);
               i {font-size: 18px;}
-              span {
+              h4 {
                 font-family: $one-family;
                 @include weight(500);
-                font-size: $large-size;
+                font-size: $small-size;
                 text-transform: uppercase;
               }
             }
