@@ -149,4 +149,54 @@ $(document).ready(function(){
     $(".skills .skill .skill-bar span b").animate({"opacity":"1"},1000);
     }, 2000);
 
+    //Our_Faqs_İtem
+    var acc = document.getElementsByClassName("faq_heading");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+
+    //Practice_Clients
+    $('.practice_clients').owlCarousel({
+        loop:true,
+        margin:0,
+        nav:false,
+        dots:true,
+        autoplay:true,
+        autoplayTimeout:4000,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            500:{
+                items:1
+            },
+            768:{
+                items:1
+            },
+            992:{
+                items:1
+            },
+            1200:{
+                items:1
+            },
+            1400:{
+                items:1
+            },
+            1600:{
+                items:1
+            }
+        }
+    });
+
 });

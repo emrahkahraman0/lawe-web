@@ -16,58 +16,58 @@ $small-size: 12px;
 
 //X-Large
 @mixin x-large() {
-    @media only screen and (max-width: 1400px) {
-        @content;
-    }
+  @media only screen and (max-width: 1400px) {
+    @content;
   }
-  //Large
-  @mixin large() {
-    @media only screen and (max-width: 1200px) {
-        @content;
-    }
+}
+//Large
+@mixin large() {
+  @media only screen and (max-width: 1200px) {
+    @content;
   }
-  //Notebook
-  @mixin notebook() {
-    @media only screen and (max-width: 992px) {
-        @content;
-    }
+}
+//Notebook
+@mixin notebook() {
+  @media only screen and (max-width: 992px) {
+    @content;
   }
-  //Tablet
-  @mixin tablet() {
-    @media only screen and (max-width: 768px) {
-        @content;
-    }
+}
+//Tablet
+@mixin tablet() {
+  @media only screen and (max-width: 768px) {
+    @content;
   }
-  //X-Tablet
-  @mixin x-tablet() {
-    @media only screen and (max-width: 575px) {
-        @content;
-    }
+}
+//X-Tablet
+@mixin x-tablet() {
+  @media only screen and (max-width: 575px) {
+    @content;
   }
-  //Mobil
-  @mixin mobil() {
-    @media only screen and (max-width: 480px) {
-        @content;
-    }
+}
+//Mobil
+@mixin mobil() {
+  @media only screen and (max-width: 480px) {
+    @content;
   }
-  //Small
-  @mixin small() {
-    @media only screen and (max-width: 350px) {
-        @content;
-    }
+}
+//Small
+@mixin small() {
+  @media only screen and (max-width: 350px) {
+    @content;
   }
-  //X-Small
-  @mixin x-small() {
-    @media only screen and (max-width: 250px) {
-        @content;
-    }
+}
+//X-Small
+@mixin x-small() {
+  @media only screen and (max-width: 250px) {
+    @content;
   }
-  //X
-  @mixin x() {
-    @media only screen and (max-width: 190px) {
-        @content;
-    }
+}
+//X
+@mixin x() {
+  @media only screen and (max-width: 190px) {
+    @content;
   }
+}
   
   //Font-Weight
   @mixin weight($weight) {

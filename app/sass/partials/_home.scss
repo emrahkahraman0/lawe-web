@@ -465,6 +465,7 @@
         height: 100%;
         background-color: rgba(34,53,85,0.6);
         padding: 0 55px;
+        @include transition(0.3s);
         @include flex;
         @include align-items(center);
         @include justify-content(center);
@@ -490,6 +491,11 @@
           @include weight(400);
           font-size: $regular-size;
           line-height: 20px;
+        }
+      }
+      &:hover {
+        .practice_caption {
+          background-color: $secondary-color;
         }
       }
       //Large

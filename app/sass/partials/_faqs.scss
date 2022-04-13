@@ -111,5 +111,97 @@
   //our_faqs
   .our_faqs {
     padding-top: 50px;
+    //&_item
+    &_item {
+      position: relative;
+      z-index: 1;
+      border: 1px solid $primary-color;
+      //faqs_title
+      .faqs_title {
+        padding: 15px 45px;
+        @include flex;
+        @include align-items(center);
+        line-height: normal;
+        font-size: $large-size;
+        color: $primary-color;
+        font-family: $one-family;
+        @include weight(500);
+        position: relative;
+        &::after {
+          position: absolute;
+          top: 0;
+          left: 20px;
+          z-index: 1;
+          @include flex;
+          @include align-items(center);
+          height: 100%;
+          content: '\e803';
+          font-family: "lawe-font";
+          color: $secondary-color;
+          @include weight(bold);
+        }
+      }
+      //faqs_content
+      .faqs_content {
+        color: $three-color;
+        line-height: 19px;
+        max-height: 0;
+        overflow: hidden;
+        font-size: $regular-size;
+        @include transition(0.3s);
+      }
+      input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        z-index: 1;
+        opacity: 0;
+        cursor: pointer;
+        &:checked + .faqs_title {
+          border-bottom: 1px solid $primary-color;
+          &::after {
+            content: "\e809";
+          }
+          & + .faqs_content {
+            max-height: 700px;
+            padding: 30px;
+          }
+        }
+      }
+      //Tablet
+      @include tablet {
+        //faqs_title
+        .faqs_title {
+          font-size: $regular-size; padding: 15px 35px;
+          &::after {left: 10px;}
+        }
+        input {
+          &:checked + .faqs_title {
+            & + .faqs_content {
+              padding: 15px;
+            }
+          }
+        }
+      }
+      //Mobil
+      @include mobil {
+        //faqs_title
+        .faqs_title {
+          font-size: $small-size; padding: 10px 27px;
+          &::after {left: 10px;}
+        }
+        input {
+          &:checked + .faqs_title {
+            & + .faqs_content {
+              padding: 15px;
+              font-size: 12px;
+              line-height: 17px;
+            }
+          }
+        }
+      }
+    }
   }
 }
