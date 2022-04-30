@@ -60,3 +60,519 @@
   }
 }
 
+//PracticeAreas_Single#
+#practiceAreas_single {
+  width: 100%;
+  padding: 100px 0;
+  //practiceAreas_single
+  .practiceAreas_single {
+    //&_detail
+    &_detail {
+      img {width: 100%;}
+      //areas_content
+      .areas_content {
+        padding-top: 15px;
+        @include flex;
+        @include justify-content(space-between);
+        //&_left
+        &_left {
+          h5 {
+            color: $primary-color;
+            font-size: 36px;
+            line-height: normal;
+            font-family: $one-family;
+            @include weight(900);
+          }
+          h6 {
+            padding-top: 10px;
+            font-family: $one-family;
+            font-style: italic;
+            color: $secondary-color;
+            font-size: $large-size;
+            line-height: 21px;
+          }
+        }
+        //&_right
+        &_right {
+          .button {
+            @include flex;
+            @include align-items(center);
+            @include justify-content(center);
+            text-align: center;
+            background-color: #f4f4f4;
+            width: 250px;
+            height: 57px;
+            color: $three-color;
+            i {font-size: 20px;}
+            h4 {
+              padding-left: 5px;
+              font-family: $one-family;
+              text-transform: uppercase;
+              font-size: $large-size;
+              @include weight(500);
+              line-height: 21px;
+            }
+          }
+        }
+      }
+      p {
+        font-family: $two-family;
+        @include weight(400);
+        font-size: $regular-size;
+        color: $three-color;
+        line-height: 19px;
+        padding: 20px 0 0 0;
+        &:last-child {
+          padding: 0;
+        }
+      }
+      //areas_list
+      .areas_list {
+        padding-top: 30px;
+      }
+      //areas_works
+      .areas_works {
+        margin-top: 30px;
+        background-color: #F4F4F4;
+      }
+      //areas_desc
+      .areas_desc {
+        padding-top: 50px;
+        img {width: 100%;}
+        .text {
+          font-family: $two-family;
+          @include weight(400);
+          font-size: $regular-size;
+          color: $three-color;
+          line-height: 19px;
+          padding: 30px 0 10px 0;
+          &:last-child {
+            padding: 5px 0 0 0;
+          }
+        }
+      }
+      //Large
+      @include large {
+        //areas_content
+        .areas_content {
+          @include align-items(center);
+          //&_left
+          &_left {
+            h5 {font-size: 25px;}
+          }
+        }
+      }
+      //Notebook
+      @include notebook {
+        text-align: center;
+        //areas_content
+        .areas_content {
+          @include flex;
+          @include flex-direction(column);
+          @include align-items(center);
+          text-align: center;
+          //&_left
+          &_left {
+            h5 {font-size: 25px;}
+          }
+          //&_right
+          &_right {margin-top: 15px;}
+        }
+        p {
+          padding: 30px 0 0 0;
+          &:last-child {
+            padding: 0;
+          }
+        }
+        //areas_list
+        .areas_list {
+        }
+      }
+      //Tablet
+      @include tablet {
+        //areas_content
+        .areas_content {
+          //&_left
+          &_left {
+            h5 {font-size: 20px;}
+          }
+        }
+        //areas_list
+        .areas_list {
+        }
+      }
+      //X-Tablet
+      @include x-tablet {
+        //areas_content
+        .areas_content {
+          //&_left
+          &_left {
+            h5 {font-size: 18px;}
+            h4 {font-size: $regular-size; line-height: normal;}
+          }
+          //&_right
+          &_right {
+            .button {
+              @include flex;
+              @include align-items(center);
+              @include flex-direction(column);
+              text-align: center;
+              width: 190px;
+              height: 55px;
+              i {font-size: $large-size;}
+              h4 {
+                padding: 5px 0 0 0;
+                font-size: $regular-size;
+                line-height: 18px;
+              }
+            }
+          }
+        }
+        //areas_list
+        .areas_list {
+        }
+        //areas_desc
+        .areas_desc {
+          img {margin-bottom: 20px;}
+          .text {
+            padding: 10px 0 10px 0;
+            &:last-child {
+              padding: 5px 0 0 0;
+            }
+          }
+        }
+      }
+      //Mobil
+      @include mobil {
+        //areas_content
+        .areas_content {
+          //&_left
+          &_left {
+            h5 {font-size: $large-size; line-height: normal}
+            h4 {font-size: $small-size; line-height: normal; padding-top: 5px;}
+          }
+          //&_right
+          &_right {
+            .button {
+              width: 100%;
+              height: 50px;
+              padding: 0 20px;
+              i {font-size: $large-size;}
+              h4 {
+                padding: 3px 0 0 0;
+                font-size: $small-size;
+                line-height: normal;
+              }
+            }
+          }
+        }
+        p {
+          font-size: $small-size; line-height: 17px;
+        }
+        //areas_list
+        .areas_list {
+        }
+        //areas_desc
+        .areas_desc {
+          .text {
+            font-size: $small-size; line-height: 17px;
+          }
+        }
+      }
+    }
+    //&_sidebar
+    &_sidebar {
+      //sidebar
+      .sidebar {
+        margin-bottom: 50px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        //.case_detail,.our_attorney,.lets_connect
+        .practice_detail,.our_attorney,.lets_connect {
+          h6 {
+            color: $five-color;
+            line-height: normal;
+            font-family: $one-family;
+            @include weight(bold);
+            font-size: 35px;
+            margin-bottom: 45px;
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              bottom: -10px;
+              left: 0;
+              width: 100%;
+              height: 1px;
+              background-color: $secondary-color;
+            }
+            //Large
+            @include large {
+              font-size: 25px;
+            }
+            //Tablet
+            @include tablet {
+              font-size: 20px;
+              margin-bottom: 40px;
+            }
+            //X-Tablet
+            @include x-tablet {
+              font-size: 18px;
+            }
+            //Mobil
+            @include mobil {
+              font-size: $large-size;
+            }
+          }
+        }
+        //practice_detail
+        .practice_detail {
+          //details
+          .details {
+            li {
+              display: block;
+              position: relative;
+              padding: 0 0 10px 18px;
+              &:last-child {
+                padding: 0 0 0 18px;
+              }
+              &::before {
+                content: "\e805";
+                position: absolute;
+                top: 2px;
+                left: 0;
+                font-family: "lawe-font";
+                @include weight(400);
+                color: $secondary-color;
+              }
+              h5 {
+                color: $five-color;
+                font-family: $two-family;
+                line-height: normal;
+                font-size: $large-size;
+                @include weight(medium);
+                span {
+                  padding-left: 5px;
+                  @include weight(100);
+                }
+              }
+            }
+          }
+        }
+        //our_attorney
+        .our_attorney {
+          //attorneys
+          .attorneys {
+            //&_item
+            &_item {
+              @include flex;
+              @include align-items(center);
+              padding-bottom: 20px;
+              &:last-child {
+                padding-bottom: 0;
+              }
+              .image {
+                img {width: 100%; @include border-radius(50%);}
+              }
+              .text {
+                padding-left: 20px;
+                h5 {
+                  line-height: normal;
+                  a {
+                    font-family: $one-family;
+                    @include weight(bold);
+                    color: $five-color;
+                    font-size: 24px;
+                  }
+                }
+                h4 {
+                  padding-top: 3px;
+                  line-height: normal;
+                  font-size: $regular-size;
+                  a {
+                    color: $five-color;
+                    font-size: $regular-size;
+                    @include weight(400);
+                    font-family: $two-family;
+                  }
+                }
+              }
+            }
+          }
+        }
+        //lets_connect
+        .lets_connect {
+          //lets
+          .lets {
+            &_item {
+              @include flex;
+              @include align-items(center);
+              padding-bottom: 10px;
+              &:last-child {
+                padding-bottom: 0;
+              }
+              i {color: $secondary-color; font-size: 18px;}
+              p,a {
+                padding-left: 15px;
+                font-family: $two-family;
+                font-size: $regular-size;
+                @include weight(regular);
+                color: $three-color;
+                line-height: 18px;
+              }
+            }
+          }
+        }
+      }
+      //Notebook
+      @include notebook {
+        margin-top: 50px;
+        text-align: center;
+        //sidebar
+        .sidebar {
+          //practice_detail
+          .practice_detail {
+            //details
+            .details {
+              li {
+                &::before {display: none;}
+              }
+            }
+          }
+          //our_attorney
+          .our_attorney {
+            //attorneys
+            .attorneys {
+              //&_item
+              &_item {
+                @include flex;
+                @include flex-direction(column);
+                @include align-items(center);
+                text-align: center;
+                //text
+                .text {
+                  padding: 10px 0 0 0;
+                  h5 {
+                    a {font-size: 20px;}
+                  }
+                }
+              }
+            }
+          }
+          //lets_connect
+          .lets_connect {
+            //lets
+            .lets {
+              //&_item
+              &_item {
+                @include flex;
+                @include flex-direction(column);
+                @include align-items(center);
+                text-align: center;
+                p,a {
+                  padding: 10px 0 0 0;
+                }
+              }
+            }
+          }
+        }
+      }
+      //Tablet
+      @include tablet {
+        //sidebar
+        .sidebar {
+          //practice_detail
+          .practice_detail {
+            //details
+            .details {
+              li {
+                h5 {font-size: $regular-size;}
+              }
+            }
+          }
+          //our_attorney
+          .our_attorney {
+            //attorneys
+            .attorneys {
+              //&_item
+              &_item {
+                //text
+                .text {
+                  h5 {
+                    a {font-size: 18px;}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      //X-Tablet
+      @include x-tablet {
+        //sidebar
+        .sidebar {
+          //our_attorney
+          .our_attorney {
+            //attorneys
+            .attorneys {
+              //&_item
+              &_item {
+                //text
+                .text {
+                  h5 {
+                    a {font-size: $large-size;}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      //Mobil
+      @include mobil {
+        //sidebar
+        .sidebar {
+          //practice_detail
+          .practice_detail {
+            //details
+            .details {
+              li {
+                h5 {font-size: $small-size;}
+              }
+            }
+          }
+          //our_attorney
+          .our_attorney {
+            //attorneys
+            .attorneys {
+              //&_item
+              &_item {
+                //text
+                .text {
+                  h5 {
+                    a {font-size: $regular-size;}
+                  }
+                  h4 {
+                    padding-top: 5px; font-size: $small-size;
+                    a {font-size: $small-size;}
+                  }
+                }
+              }
+            }
+          }
+          //lets_connect
+          .lets_connect {
+            //lets
+            .lets {
+              //&_item
+              &_item {
+                p,a {padding: 8px 0 0 0; font-size: $small-size;}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
