@@ -129,11 +129,83 @@
       //areas_list
       .areas_list {
         padding-top: 30px;
+        @include flex;
+        ul {
+          &:last-child {
+            margin-left: 200px;
+          }
+          li {
+            font-family: $two-family;
+            @include weight(400);
+            font-size: $regular-size;
+            line-height: 20px;
+            color: $five-color;
+            letter-spacing: 0.5px;
+            position: relative;
+            padding: 0 0 10px 30px;
+            &:last-child {
+              padding: 0 0 0 30px;
+            }
+            &::before {
+              content: "\e808";
+              font-family: "lawe-font";
+              position: absolute;
+              top: 0;
+              left: 0;
+              font-size: 18px;
+              color: $secondary-color;
+            }
+          }
+        }
       }
       //areas_works
       .areas_works {
         margin-top: 30px;
-        background-color: #F4F4F4;
+        h5 {
+          font-family: $one-family;
+          font-size: 35px;
+          text-transform: capitalize;
+          @include weight(bold);
+          line-height: normal;
+          color: $primary-color;
+        }
+        h6 {
+          padding-top: 5px;
+          font-family: $one-family;
+          font-size: $large-size;
+          font-style: italic;
+          text-transform: capitalize;
+          @include weight(500);
+          line-height: normal;
+          color: $secondary-color;
+        }
+        //works
+        .works {
+          margin-top: 25px;
+          padding: 25px 30px;
+          background-color: #F4F4F4;
+          //&_item
+          &_item {
+            i {color: $secondary-color; font-size: 35px;}
+            h4 {
+              padding-top: 15px;
+              font-family: $one-family;
+              @include weight(bold);
+              font-size: 24px;
+              text-transform: capitalize;
+              color: $five-color;
+              line-height: normal;
+            }
+            p {
+              padding-top: 10px;
+              font-family: $two-family;
+              letter-spacing: 0.5px;
+              color: $three-color;
+              font-size: $regular-size;
+              line-height: 19px;
+            }
+          }
+        }
       }
       //areas_desc
       .areas_desc {
@@ -186,6 +258,19 @@
         }
         //areas_list
         .areas_list {
+          text-align: center;
+          @include flex;
+          @include justify-content(center);
+          @include align-items(center);
+          ul {
+            &:last-child {
+              margin-left: 100px;
+            }
+          }
+        }
+        //areas_works
+        .areas_works {
+          h5 {font-size: 25px;}
         }
       }
       //Tablet
@@ -199,6 +284,22 @@
         }
         //areas_list
         .areas_list {
+        }
+        //areas_works
+        .areas_works {
+          h5 {font-size: 20px;}
+          h6 {font-size: $regular-size;}
+          //works
+          .works {
+            //&_item
+            &_item {
+              margin-bottom: 30px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+              h4 {padding-top: 10px; font-size: 20px;}
+            }
+          }
         }
       }
       //X-Tablet
@@ -230,6 +331,24 @@
         }
         //areas_list
         .areas_list {
+          @include flex;
+          @include flex-direction(column);
+          ul {
+            &:last-child {
+              margin: 10px 0 0 0;
+            }
+          }
+        }
+        //areas_works
+        .areas_works {
+          h5 {font-size: 18px;}
+          //works
+          .works {
+            //&_item
+            &_item {
+              h4 {font-size: $large-size;}
+            }
+          }
         }
         //areas_desc
         .areas_desc {
@@ -269,8 +388,36 @@
         p {
           font-size: $small-size; line-height: 17px;
         }
-        //areas_list
-        .areas_list {
+         //areas_list
+         .areas_list {
+          ul {
+            li {
+              font-size: $small-size;
+              line-height: normal;
+              padding: 0 0 10px 22px;
+              &:last-child {
+                padding: 0 0 0 22px;
+              }
+              &::before {
+                top: -1px;
+                left: 0;
+                font-size: $large-size;
+              }
+            }
+          }
+        }
+        //areas_works
+        .areas_works {
+          h5 {font-size: $large-size;}
+          h6 {font-size: $small-size;}
+          //works
+          .works {
+            //&_item
+            &_item {
+              h4 {font-size: $regular-size;}
+              p {font-size: $small-size; line-height: 17px;}
+            }
+          }
         }
         //areas_desc
         .areas_desc {

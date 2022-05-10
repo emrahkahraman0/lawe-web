@@ -113,7 +113,7 @@
             color: $primary-color;
           }
         }
-        ul {
+        .dropdown {
           width: 200px;
           position: absolute;
           top: 50px;
@@ -178,7 +178,7 @@
           }
         }
         &:hover {
-          ul {
+          .dropdown {
             opacity: 1;
             visibility: visible;
           }
@@ -228,7 +228,7 @@
           a {
             font-size: $regular-size;
           }
-          ul {
+          .dropdown {
             li {
               a {font-size: $regular-size;}
             }
@@ -268,7 +268,8 @@
               background-color: $secondary-color;
             }
           }
-          ul {
+          
+          .dropdown {
             width: 100%;
             top: 30px;
             padding: 15px 0;
