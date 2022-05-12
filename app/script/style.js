@@ -2,12 +2,22 @@
 
 $(document).ready(function(){
 
+    //Lazyload
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazyload"
+    });
+
     //Menu
     $(function () {
         $('.hamburger').on('click', function () {
             $('.toggle').toggleClass('open');
             $('.menu').toggleClass('open');
         });
+    });
+
+    //Dropdown
+    $('.menu>a').on('click', function () {
+        $('.dropdown').toggleClass('click');
     });
 
     //Menu-Active
@@ -194,29 +204,8 @@ $(document).ready(function(){
         }
     });
 
-});
+    //Scroll-Reveal
+    ScrollReveal().reveal('#top_header, #header, #footer', { delay: 500 });
+    ScrollReveal().reveal('#home_slider, #home_counter, #home_practices, #home_clients, #brands, #home_attorneys, #home_statement, #home_blog, #informations, #about_page, #about_info, #about_weAre, #attorneys_page, #attorneys_ceo, #attorneys_meets, #attorneys_single_page, #attorneys_details, #school_work, #skills_awards, #caseStudy_page, #our_caseStudy, #caseStudy_single_page, #caseStudy_single, #contact_page, #contact_map, #our_contact, #faqs_page, #our_faqs, #historys_page, #our_historys, #practiceAreas_page, #practices_areas, #practice_clients, #practiceAreas_single_page, #practiceAreas_single', { delay: 300 });
 
-jQuery(document).ready(function (e) {
-    function t(t) {
-        e(t).bind("click", function (t) {
-            t.preventDefault();
-            e(this).parent().fadeOut()
-        })
-    }
-    e(".dropdown-toggle").click(function () {
-        var t = e(this).parents(".button-dropdown").children(".dropdown-menu").is(":hidden");
-        e(".button-dropdown .dropdown-menu").hide();
-        e(".button-dropdown .dropdown-toggle").removeClass("active");
-        if (t) {
-            e(this).parents(".button-dropdown").children(".dropdown-menu").toggle().parents(".button-dropdown").children(".dropdown-toggle").addClass("active")
-        }
-    });
-    e(document).bind("click", function (t) {
-        var n = e(t.target);
-        if (!n.parents().hasClass("button-dropdown")) e(".button-dropdown .dropdown-menu").hide();
-    });
-    e(document).bind("click", function (t) {
-        var n = e(t.target);
-        if (!n.parents().hasClass("button-dropdown")) e(".button-dropdown .dropdown-toggle").removeClass("active");
-    })
 });

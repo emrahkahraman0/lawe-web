@@ -113,6 +113,7 @@
             color: $primary-color;
           }
         }
+        //dropdown
         .dropdown {
           width: 200px;
           position: absolute;
@@ -177,7 +178,8 @@
             }
           }
         }
-        &:hover {
+        //click
+        &.click {
           .dropdown {
             opacity: 1;
             visibility: visible;
