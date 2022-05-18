@@ -16,8 +16,14 @@ $(document).ready(function(){
     });
 
     //Dropdown
-    $('.menu>a').on('click', function () {
-        $('.dropdown').toggleClass('click');
+    $('.menu li > a').on('click', function (event) {
+        event.preventDefault();
+
+        const $this = $(this);
+        const $dropdown = $this.next('.dropdown');
+
+        $('.dropdown').removeClass('active');
+        $dropdown.addClass('active');
     });
 
     //Menu-Active

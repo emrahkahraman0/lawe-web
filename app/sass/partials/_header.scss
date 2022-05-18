@@ -177,10 +177,7 @@
               }
             }
           }
-        }
-        //click
-        &.click {
-          .dropdown {
+          &.active {
             opacity: 1;
             visibility: visible;
           }
