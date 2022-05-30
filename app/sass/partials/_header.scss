@@ -177,10 +177,10 @@
               }
             }
           }
-          &.active {
-            opacity: 1;
-            visibility: visible;
-          }
+        }
+        .dropdown.open {
+          opacity: 1;
+          visibility: visible;
         }
         .active {
           position: relative;

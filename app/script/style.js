@@ -16,15 +16,19 @@ $(document).ready(function(){
     });
 
     //Dropdown
-    $('.menu li > a').on('click', function (event) {
+    $('.menu > li > a').on('click', function (event) {
         event.preventDefault();
 
         const $this = $(this);
         const $dropdown = $this.next('.dropdown');
 
-        $('.dropdown').removeClass('active');
-        $dropdown.addClass('active');
+        $('.dropdown').removeClass('open');
+        $dropdown.addClass('open');
     });
+
+    $('.none').click(function() {
+        $('.dropdown > a').hide();
+      });
 
     //Menu-Active
     jQuery(function($) {
