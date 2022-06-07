@@ -26,10 +26,6 @@ $(document).ready(function(){
         $dropdown.addClass('open');
     });
 
-    $('.none').click(function() {
-        $('.dropdown > a').hide();
-      });
-
     //Menu-Active
     jQuery(function($) {
         var path = window.location.href;
