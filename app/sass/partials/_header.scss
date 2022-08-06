@@ -117,7 +117,7 @@
         .dropdown {
           width: 200px;
           position: absolute;
-          top: 50px;
+          top: 48px;
           left: 0;
           z-index: 2;
           padding: 15px 0 18px 10px;
@@ -178,10 +178,14 @@
             }
           }
         }
-        .dropdown.open {
-          opacity: 1;
-          visibility: visible;
+        
+        &:hover {
+          .dropdown {
+            opacity: 1;
+            visibility: visible;
+          }
         }
+
         .active {
           position: relative;
           &::before {
@@ -280,6 +284,18 @@
               a {font-size: 12px; line-height: normal;}
             }
           }
+          &:hover {
+            .dropdown {
+              opacity: 0;
+              visibility: hidden;
+            }
+          }
+          
+          .dropdown.open {
+            opacity: 1;
+            visibility: visible;
+          }
+
         }
       }
       .menu.open {
